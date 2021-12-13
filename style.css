@@ -1,0 +1,83 @@
+/* Body Styling */
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #2a2a33;
+  overflow-x: hidden;
+  background-color: #f9f9fb;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
+  font-size: 93.75%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main styling */
+
+main {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  padding: 72px 0;
+  justify-content: center;
+}
+.nav-login {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  position: absolute;
+  right: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+em,
+#emA {
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(89, 107, 130);
+  text-decoration: none;
+  font-style: normal;
+  display: inline-flex;
+}
+
+#formContainer {
+  width: 300px;
+  height: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#myTabContent {
+  width: 300px;
+}
+
+.ctmbtn {
+  border: 1px solid black;
+  border-radius: 5px;
+}
