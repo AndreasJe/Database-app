@@ -1,24 +1,5 @@
 <?php
-
-// $host = 'localhost';
-// $db   = 'elearning';
-// $user = 'postgres';
-// $pass = '22486050';
-// $charset = 'utf8mb4';
-
-// $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-// $options = [
-//   PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-//   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-//   PDO::ATTR_EMULATE_PREPARES   => false,
-// ];
-// try {
-//   $pdo = new PDO($dsn, $user, $pass, $options);
-// } catch (\PDOException $e) {
-//   throw new \PDOException($e->getMessage(), (int)$e->getCode());
-// }
-
-$db = new PDO("pgsql:host=localhost;dbname=elearning", "postgres", "22486050");
+$db = new PDO("pgsql:host=localhost;dbname=exam", "postgres", "22486050");
 
 //Response 500 means server error
 function send_500($error_message)
