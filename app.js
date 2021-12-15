@@ -48,3 +48,22 @@ async function signup() {
     _one("#feedback_signup").innerHTML = JSON.stringify(response);
   }
 }
+
+async function enroll() {
+  const form = event.target.form;
+  console.log(form);
+  let conn = await fetch("apis/api-enrollment", {
+    method: "POST",
+    body: new FormData(form),
+  });
+  let response = await conn.json();
+  if (conn.ok) {
+    _one("#feedback-enroll").innerHTML = " ";
+    _one("#feedback-enroll").classList.add("badge", "bg-success");
+    _one("#feedback-enroll").innerHTML = JSON.stringify(response);
+  } else {
+    _one("#feedback-enroll").innerHTML = " ";
+    _one("#feedback-enroll").classList.add("badge", "bg-danger");
+    _one("#feedback-enroll").innerHTML = JSON.stringify(response);
+  }
+}

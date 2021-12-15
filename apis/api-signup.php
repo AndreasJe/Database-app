@@ -27,12 +27,14 @@ if (strlen($_POST['user_password']) > 22) {
 try {
   $password = $_POST['user_password'];
   $email = $_POST['user_email'];
+  $first_name = $_POST['first_name'];
+  $last_name = $_POST['last_name'];
   $hashed_password = password_hash($password, PASSWORD_DEFAULT);
   $created_date = date("Y-m-d H:i:s");
   // Insert data in the Database
   $q = $db->prepare('INSERT INTO public.students VALUES(:first_name, :last_name, :email, :password, :courses_enrolled, :courses_complete, :verified, :registration_date  )');
-  $q->bindValue(":first_name", null);
-  $q->bindValue(":last_name",  null);
+  $q->bindValue(":first_name", $first_name);
+  $q->bindValue(":last_name",  $last_name);
   $q->bindValue(":email", $email);
   $q->bindValue(":password", $hashed_password);
   $q->bindValue(":courses_enrolled",  0);

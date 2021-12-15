@@ -29,7 +29,7 @@ main {
   margin-bottom: 60px;
   display: flex;
   padding: 72px 0;
-  justify-content: center;
+  flex-direction: column;
 }
 .nav-login {
   display: flex;
@@ -48,8 +48,12 @@ footer {
   width: 100%;
   text-align: center;
 }
+.card-body em {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
-em,
 #emA {
   -webkit-font-smoothing: antialiased;
   text-transform: none;
@@ -80,4 +84,34 @@ form {
 .ctmbtn {
   border: 1px solid black;
   border-radius: 5px;
+}
+
+#feedback_signup,
+#feedback_login {
+  width: fit-content;
+}
+
+.feedback_container {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+.type-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.7rem;
+  color: darkgrey;
+}
+p.card-text {
+  text-align: left;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  min-height: 40px;
 }

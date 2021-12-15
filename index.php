@@ -18,7 +18,7 @@
     <!-- Page Content -->
     <main>
 
-        <div id="formContainer">
+        <div id="formContainer" class="mx-auto">
 
             <ul class=" nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -55,26 +55,27 @@
                     </div>
                     <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
                         <form id="form_sign_up" onsubmit="return false">
+                            <label for="first_name">First Name</label>
+                            <input name="first_name" data-validate="str" data-min="5" data-max="30">
+                            <label for="last_name">Last Name</label>
+                            <input name="last_name" data-validate="str" data-min="3" data-max="50">
                             <label for="user_email">Email</label>
                             <input name="user_email" type="email" data-validate="email" placeholder="Enter email"
                                 data-min="5" data-max="30">
                             <label for="user_password">Password</label>
                             <input name="user_password" required type="password" data-validate="str"
-                                placeholder="Create password" data-min="8" data-max="30">
+                                placeholder="Create password" data-min="3" data-max="30">
 
-                            <em class="password_req"> At least 8 characters<br>
-                                Mix of letters and numbers<br>
-                                At least 1 special character<br>
-                                At least 1 lowercase letter and 1 uppercase letter</em>
+                            <em class="password_req"> Use at least 3 characters</em>
                             <button class="w-100 mt-3 mb-3" onclick="signup()"> Submit </button>
                         </form>
-                        <div>
+                        <div class="feedback_container">
                             <p id="feedback_signup" class="text-center d-block">
                             </p>
                         </div>
                         <div class="modal-footer modal_info justify-content-center d-flex">
-                            <em>By submitting, I accept the</em><a id="emA" href="#">terms
-                                of use.</a>
+                            <em>By submitting, I accept the terms
+                                of use.</em>
                         </div>
                     </div>
                 </div>

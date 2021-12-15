@@ -12,7 +12,8 @@ include __DIR__ . "/components/header.php";
 <!-- Page Content -->
 <main>
 
-    <h2>Welcome</h2>
+
+    <h2 class="text-center">Welcome <?= $_SESSION['first_name'] ?></h2>
 
 
 </main>

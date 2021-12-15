@@ -12,7 +12,11 @@ include __DIR__ . "/components/header.php";
 <!-- Page Content -->
 <main>
 
-    <h2>Diploma incoming</h2>
+    <h2 class="text-center">Diploma incoming</h2>
+    <p class="text-center">
+        Skal vise de kurser man er igang med, og om de er complete eller ej.</p>
+
+
 
 
 </main>
